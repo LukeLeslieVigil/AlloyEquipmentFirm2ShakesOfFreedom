@@ -11,12 +11,17 @@ public class ShakeCollect : MonoBehaviour
 
     private ScoreCounter scoreCounter;
 
+    //Looks for the game controller then sets it so that it can
+    //parse the number of shakes collected to another script.
     private void Start()
     {
         gameController = GameObject.FindWithTag("GameController");
         scoreCounter = gameController.GetComponent<ScoreCounter>();
     }
 
+    //Checks which tag enters the collider so it can give the correct
+    //point value to the player or enemy,
+    //then destroys the shake.
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
