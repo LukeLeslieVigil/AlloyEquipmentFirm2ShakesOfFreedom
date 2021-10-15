@@ -17,18 +17,16 @@ public class ScoreCounter : MonoBehaviour
     [SerializeField]
     private GameObject YouLoseScreen;
 
-
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         //Debug.Log(playerScore);
         ScoreTracker();
     }
 
+    //Changes the text based on shakes collected,
+    //with the number being parsed from the ShakeCollect script.
+    //Then, it checks if the number of shakes collected is equal or greater than 10
+    //for both the player and enemy, setting the win / lose screen accordingly.
     private void ScoreTracker()
     {
         playerScoreTracker.text = "Player Score: " + playerScore;
@@ -44,12 +42,14 @@ public class ScoreCounter : MonoBehaviour
         }
     }
 
+    //Pauses the game, sets the win screen
     private void YouWin()
     {
         Time.timeScale = 0f;
         YouWinScreen.SetActive(true);
     }
 
+    //Pauses the game, sets the lose screen
     private void YouLose()
     {
         Time.timeScale = 0f;

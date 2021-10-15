@@ -19,15 +19,18 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+        //Checks if the player is grounded so the player doesn't go flying off into space
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
         }
 
+        //Gets the inputs from the keyboard set using project settings
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
 
+        //Moves the player forward based on inputs
         if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
