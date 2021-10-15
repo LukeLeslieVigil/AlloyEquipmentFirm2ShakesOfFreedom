@@ -12,6 +12,11 @@ public class ScoreCounter : MonoBehaviour
     private TMP_Text playerScoreTracker;
     [SerializeField]
     private TMP_Text enemyScoreTracker;
+    [SerializeField]
+    private GameObject YouWinScreen;
+    [SerializeField]
+    private GameObject YouLoseScreen;
+
 
     void Start()
     {
@@ -20,6 +25,34 @@ public class ScoreCounter : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(playerScore);
+        //Debug.Log(playerScore);
+        ScoreTracker();
+    }
+
+    private void ScoreTracker()
+    {
+        playerScoreTracker.text = "Player Score: " + playerScore;
+        enemyScoreTracker.text = "Enemy Score: " + enemyScore;
+
+        if (playerScore >= 10)
+        {
+            YouWin();
+        }
+        else if (enemyScore >= 10)
+        {
+            YouLose();
+        }
+    }
+
+    private void YouWin()
+    {
+        Time.timeScale = 0f;
+        YouWinScreen.SetActive(true);
+    }
+
+    private void YouLose()
+    {
+        Time.timeScale = 0f;
+        YouLoseScreen.SetActive(true);
     }
 }
