@@ -23,6 +23,10 @@ public class ShakeCollect : MonoBehaviour
         {
             scoreCounter.playerScore += 1;
         }
+        else if (other.tag == "Enemy")
+        {
+            scoreCounter.enemyScore += 1;
+        }
         Destroy(shake);
     }
 }
