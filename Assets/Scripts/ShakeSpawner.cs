@@ -9,6 +9,7 @@ public class ShakeSpawner : MonoBehaviour
     
     private GameObject shakeClone;
     private int spawnPoint;
+    private int currentSpawnPoint = -1;
 
 
     void spawnShake(int num)
@@ -24,8 +25,12 @@ public class ShakeSpawner : MonoBehaviour
         if (shakeClone == null)
         {
             spawnPoint = Random.Range(0, spawnLocations.Length);
-            spawnShake(spawnPoint);
-            Debug.Log("Shake spawned at Spawn Location: " + spawnPoint);
+            if (spawnPoint != currentSpawnPoint)
+            {
+                spawnShake(spawnPoint);
+                currentSpawnPoint = spawnPoint;
+            }
+            //Debug.Log("Shake spawned at Spawn Location: " + spawnPoint);
         }
     }
 }

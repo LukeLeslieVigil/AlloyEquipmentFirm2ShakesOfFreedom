@@ -135,6 +135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1015074584560465358, guid: 34ccb81edf345be4285166010e231787,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1015074584560465358, guid: 34ccb81edf345be4285166010e231787,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -2485,7 +2490,7 @@ PrefabInstance:
     - target: {fileID: 1015074584560465358, guid: 34ccb81edf345be4285166010e231787,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1015074584560465358, guid: 34ccb81edf345be4285166010e231787,
         type: 3}
