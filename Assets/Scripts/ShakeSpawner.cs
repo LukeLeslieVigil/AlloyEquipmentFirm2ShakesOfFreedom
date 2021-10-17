@@ -22,7 +22,7 @@ public class ShakeSpawner : MonoBehaviour
     private void Update()
     {
         // Checks if the instantiatable shake exists, then creates one in a random spawn position
-        if (shakeClone == null)
+        /*if (shakeClone == null)
         {
             spawnPoint = Random.Range(0, spawnLocations.Length);
             if (spawnPoint != currentSpawnPoint)
@@ -31,6 +31,6 @@ public class ShakeSpawner : MonoBehaviour
                 currentSpawnPoint = spawnPoint;
             }
             //Debug.Log("Shake spawned at Spawn Location: " + spawnPoint);
-        }
+        }*/
     }
 }

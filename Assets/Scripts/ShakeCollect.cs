@@ -32,6 +32,6 @@ public class ShakeCollect : MonoBehaviour
         {
             scoreCounter.enemyScore += 1;
         }
-        Destroy(shake);
+        //Destroy(shake);
     }
 }
