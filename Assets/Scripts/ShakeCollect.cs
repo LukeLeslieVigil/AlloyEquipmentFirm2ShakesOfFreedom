@@ -10,6 +10,7 @@ public class ShakeCollect : MonoBehaviour
     private GameObject gameController;
 
     private ScoreCounter scoreCounter;
+    private ShakeSpawner shakeSpawner;
 
     //Looks for the game controller then sets it so that it can
     //parse the number of shakes collected to another script.
@@ -17,11 +18,12 @@ public class ShakeCollect : MonoBehaviour
     {
         gameController = GameObject.FindWithTag("GameController");
         scoreCounter = gameController.GetComponent<ScoreCounter>();
+        shakeSpawner = gameController.GetComponent<ShakeSpawner>();
     }
 
     //Checks which tag enters the collider so it can give the correct
     //point value to the player or enemy,
-    //then destroys the shake.
+    //then moves the shake.
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -32,6 +34,6 @@ public class ShakeCollect : MonoBehaviour
         {
             scoreCounter.enemyScore += 1;
         }
-        Destroy(shake);
+        shakeSpawner.MoveShake();
     }
 }

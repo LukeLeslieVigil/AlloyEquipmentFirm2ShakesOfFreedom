@@ -11,23 +11,20 @@ public class ShakeSpawner : MonoBehaviour
     private int spawnPoint;
     private int currentSpawnPoint = -1;
 
-
-    void spawnShake(int num)
+    private void Start()
     {
-        // Sets an instantiatable gameobject of a shake,
-        // and takes in input of which spawn location it will spawn at.
-        shakeClone = Instantiate(shake, spawnLocations[num].transform);
+        spawnPoint = Random.Range(0, spawnLocations.Length);
+        shake.transform.position = spawnLocations[spawnPoint].position;
     }
-
-    private void Update()
+    public void MoveShake()
     {
-        // Checks if the instantiatable shake exists, then creates one in a random spawn position
-        if (shakeClone == null)
+        // Checks if the shake exists, then moves to a random spawn position
+        if (shake != null)
         {
             spawnPoint = Random.Range(0, spawnLocations.Length);
             if (spawnPoint != currentSpawnPoint)
             {
-                spawnShake(spawnPoint);
+                shake.transform.position = spawnLocations[spawnPoint].position;
                 currentSpawnPoint = spawnPoint;
             }
             //Debug.Log("Shake spawned at Spawn Location: " + spawnPoint);
