@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43756804, g: 0.48541242, b: 0.5656882, a: 1}
+  m_IndirectSpecularColor: {r: 0.4375676, g: 0.48541158, b: 0.56568706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -599,6 +599,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480868189}
   m_CullTransparentMesh: 0
+--- !u!95 &599258486 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2444599990176223229, guid: 34ccb81edf345be4285166010e231787,
+    type: 3}
+  m_PrefabInstance: {fileID: 1015074584988893664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &692952762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,6 +2370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1015074584560465359, guid: 34ccb81edf345be4285166010e231787,
         type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 599258486}
+    - target: {fileID: 1015074584560465359, guid: 34ccb81edf345be4285166010e231787,
+        type: 3}
       propertyPath: playerSpeed
       value: 5
       objectReference: {fileID: 0}
@@ -2427,5 +2438,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2444599990176223229, guid: 34ccb81edf345be4285166010e231787,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 47bce5202844e0649947a97d0a8875cd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ccb81edf345be4285166010e231787, type: 3}
