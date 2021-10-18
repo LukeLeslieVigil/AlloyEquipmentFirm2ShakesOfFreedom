@@ -27,6 +27,7 @@ public class ShakeCollect : MonoBehaviour
         if (other.tag == "Player")
         {
             scoreCounter.playerScore += 1;
+            //other.transform.localPosition = new Vector3(Random.Range(-3.5f, 3.5f), 0, Random.Range(-3.5f, 3.5f));
         }
         else if (other.tag == "Enemy")
         {
