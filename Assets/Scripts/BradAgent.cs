@@ -13,7 +13,7 @@ public class BradAgent : Agent
     public override void OnEpisodeBegin()
     {
         transform.localPosition = Vector3.zero;
-        targetTransform.localPosition = new Vector3(Random.Range(-3.5f, 3.5f), 0, Random.Range(-3.5f, 3.5f));
+        //targetTransform.localPosition = new Vector3(Random.Range(-3.5f, 3.5f), 0, Random.Range(-3.5f, 3.5f));
         //targetTransform = GameObject.FindGameObjectWithTag("Goal").transform;
     }    
 

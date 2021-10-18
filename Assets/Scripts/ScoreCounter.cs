@@ -5,6 +5,7 @@ using TMPro;
 
 public class ScoreCounter : MonoBehaviour
 {
+    public int scoreToWin;
     public int playerScore = 0;
     public int enemyScore = 0;
 
@@ -32,11 +33,11 @@ public class ScoreCounter : MonoBehaviour
         playerScoreTracker.text = "Player Score: " + playerScore;
         enemyScoreTracker.text = "Enemy Score: " + enemyScore;
 
-        if (playerScore >= 10)
+        if (playerScore >= scoreToWin)
         {
             YouWin();
         }
-        else if (enemyScore >= 10)
+        else if (enemyScore >= scoreToWin)
         {
             YouLose();
         }
